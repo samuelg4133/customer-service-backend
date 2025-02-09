@@ -5,6 +5,7 @@
   "author": "Samuel Gomes Vieira",
   "private": true,
   "license": "ISC",
+  "title": "Customer Service",
   "scripts": {
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
@@ -24,12 +25,21 @@
   },
   "dependencies": {
     "@nestjs/common": "^11.0.1",
+    "@nestjs/config": "^4.0.0",
     "@nestjs/core": "^11.0.1",
     "@nestjs/platform-express": "^11.0.1",
+    "@nestjs/platform-socket.io": "^11.0.8",
+    "@nestjs/swagger": "^11.0.3",
+    "@nestjs/websockets": "^11.0.8",
+    "@socket.io/redis-adapter": "^8.3.0",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.1",
     "customer-service": "file:",
     "customer-service-backend": "file:",
+    "redis": "^4.7.0",
     "reflect-metadata": "^0.2.2",
-    "rxjs": "^7.8.1"
+    "rxjs": "^7.8.1",
+    "socket.io": "^4.8.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.7.1",

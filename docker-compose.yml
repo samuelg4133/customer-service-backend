@@ -1,0 +1,23 @@
+networks:
+  customer-service:
+    name: customer-service
+
+services:
+  redis:
+    hostname: customer-service.redis
+    container_name: customer-service-redis
+    image: redis:alpine
+    restart: always
+    volumes:
+      - ~/.docker-conf/cache:/data
+    networks:
+      - customer-service
+    ports:
+      - ${REDIS_PORT}:6379
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+      - REDIS_USER=${REDIS_USER}
+      - REDIS_PASSWORD=${REDIS_PASSWORD}
+      - REDIS_HOST=${REDIS_HOST}
+      - REDIS_PORT=${REDIS_PORT}
+      - REDIS_TLS=${REDIS_TLS}

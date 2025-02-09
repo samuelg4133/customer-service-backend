@@ -27,7 +27,6 @@
       ]
     },
     "types": [
-       "multer",
       "vitest/globals",
     ]
   }

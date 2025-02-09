@@ -3,7 +3,7 @@ import eslint from "@eslint/js";
 import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
 import globals from "globals";
 import tseslint from "typescript-eslint";
-import eslintPluginImportHelpers from 'eslint-plugin-import-helpers'
+import eslintPluginImportHelpers from "eslint-plugin-import-helpers"
 
 export default tseslint.config(
   {
@@ -14,14 +14,14 @@ export default tseslint.config(
   eslintPluginPrettierRecommended,
   {
     plugins: {
-      'import-helpers': eslintPluginImportHelpers
+      "import-helpers": eslintPluginImportHelpers
     },
     languageOptions: {
       globals: {
         ...globals.node,
         ...globals.jest,
       },
-      ecmaVersion: 'latest',
+      ecmaVersion: "latest",
       sourceType: "module",
       parserOptions: {
         project: "tsconfig.json",
@@ -35,23 +35,25 @@ export default tseslint.config(
     rules: {
       "@typescript-eslint/no-explicit-any": "off",
       "@typescript-eslint/no-floating-promises": "warn",
-      "@typescript-eslint/no-unsafe-argument": "warn",
-      'import-helpers/order-imports': [
-        'warn',
+      "@typescript-eslint/no-unsafe-argument": "off",
+      "@typescript-eslint/no-unsafe-call": "off",
+      "@typescript-eslint/no-unsafe-assignment": "off",
+      "import-helpers/order-imports": [
+        "warn",
         {
-          'newlinesBetween': 'always',
-          'groups': [
-            'module',
-            '/^@\\//',
+          "newlinesBetween": "always",
+          "groups": [
+            "module",
+            "/^@\\//",
             [
-              'parent',
-              'sibling'
+              "parent",
+              "sibling"
             ],
-            'index'
+            "index"
           ],
-          'alphabetize': {
-            'order': 'asc',
-            'ignoreCase': true
+          "alphabetize": {
+            "order": "asc",
+            "ignoreCase": true
           }
         }
       ],
