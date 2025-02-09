@@ -14,7 +14,7 @@ export class RedisIoAdapter extends IoAdapter {
     private readonly env: EnvService,
   ) {
     super(appOrHttpServer);
-    this.connectToRedis();
+    void this.connectToRedis();
   }
 
   async connectToRedis(): Promise<void> {
