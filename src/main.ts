@@ -7,7 +7,7 @@ import { description, title, version } from "../package.json";
 import { AppModule } from "./app.module";
 import { EnvService } from "./infrastructure/env/env.service";
 import { AppErrorFilter } from "./infrastructure/http/filters/app-error.filter";
-import { RedisIoAdapter } from "./infrastructure/socket-io/redis-io.adapter";
+import { RedisIoAdapter } from "./infrastructure/websocket/redis-io.adapter";
 
 async function bootstrap(): Promise<void> {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);

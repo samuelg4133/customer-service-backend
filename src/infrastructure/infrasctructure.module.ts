@@ -4,6 +4,7 @@ import { plainToInstance } from "class-transformer";
 
 import { Env } from "./env/env.dto";
 import { EnvModule } from "./env/env.module";
+import { WebsocketModule } from "./websocket/websocket.module";
 
 @Module({
   imports: [
@@ -21,6 +22,7 @@ import { EnvModule } from "./env/env.module";
       isGlobal: true,
     }),
     EnvModule,
+    WebsocketModule,
   ],
 })
 export class InfraModule {}
