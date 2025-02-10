@@ -1,7 +1,8 @@
-import { Test, TestingModule } from '@nestjs/testing';
-import { QueueManagementGateway } from './queue-management.gateway';
+import { Test, TestingModule } from "@nestjs/testing";
 
-describe('QueueManagementGateway', () => {
+import { QueueManagementGateway } from "./queue-management.gateway";
+
+describe("QueueManagementGateway", () => {
   let gateway: QueueManagementGateway;
 
   beforeEach(async () => {
@@ -12,7 +13,7 @@ describe('QueueManagementGateway', () => {
     gateway = module.get<QueueManagementGateway>(QueueManagementGateway);
   });
 
-  it('should be defined', () => {
+  it("should be defined", () => {
     expect(gateway).toBeDefined();
   });
 });
